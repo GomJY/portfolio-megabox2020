@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>라이프시어터,메가박스</title>
+	<link rel=" shortcut icon" href="./img/ico/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./img/ico/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<h1 class="megabox"><a href="/" title="메인화면으로 가기" class="ir_pm">MEGABOX : Life Theater</a></h1>
+		<nav id="header-menu">
+			<div class="container">
+				<ul class='header-menu'>
+					<li>
+						<a href="" class="gnb-text hover">영화</a>
+						<div class="gnb-depth2">
+							<ul>
+								<li><a href="/movie" title="전체영화">전체영화</a></li>
+								<li><a href="/curation/specialcontent" title="큐레이션">큐레이션</a></li>
+								
+								<li id="festivalArea" style="display: none;"><a href="/festival" title="영화제">영화제</a></li>
+								<li><a href="/moviepost/all" title="무비포스트">무비포스트</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" class="gnb-text hover">예매</a>
+						<div class="gnb-depth2">
+							<ul>
+								<li><a href="/booking" title="빠른예매">빠른예매</a></li>
+								<li><a href="/booking/timetable" title="상영시간표">상영시간표</a></li>
+								<li><a href="/booking/privatebooking" title="더 부티크 프라이빗 예매">더 부티크 프라이빗 예매</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" class="gnb-text hover">극장</a>
+						<div class="gnb-depth2">
+							<ul>
+								<li><a href="/theater/list" title="전체극장">전체극장</a></li>
+								<li><a href="/specialtheater/list" title="특별관">특별관</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" class="gnb-text hover">이벤트</a>
+						<div class="gnb-depth2">
+							<ul>
+								<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event');return false;" title="진행중 이벤트">진행중 이벤트</a></li>
+								<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event/end');return false;" title="지난 이벤트">지난 이벤트</a></li>
+								<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event/winner/list');return false;" title="당첨자발표">당첨자발표</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="" class="gnb-text">스토어</a>
+					</li>
+					<li>
+						<a href="" class="gnb-text hover">헤택</a>
+						<div class="gnb-depth2">
+							<ul>
+								<li><a href="/benefit/membership" title="메가박스 멤버십">메가박스 멤버십</a></li>
+								<li><a href="/benefit/discount/guide" title="제휴/할인">제휴/할인</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div id="link-area">
+					<a href="" class="sitemap icon-menu">메뉴</a>
+					<a href="" class="sitemap icon-search">검색</a>
+					<a href="" class="sitemap icon-mymega">마이페이지</a>
+					<a href="" class="sitemap icon-schedule-wh">스케줄</a>
+				</div>
+				<div class="util-area">
+					<div class="left-link">
+						<a href="#">VIP LOUNGE</a>
+						<a href="#">맴버쉽</a>
+						<a href="#">고객센터</a>
+					</div>
+					<div class="right-link">
+						<a href="#">로그인</a>
+						<a href="#">회원가입</a>
+						<a href="#">빠른예매</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="layer-menu" style="display:none;">
+			<div class="container">
+				<a href="" class="ir_so" title="사이트맵 레이어 입니다.">사이트맵 레이어 입니다.</a>
+				<p class="tit">SITEMAP</p>
+				<div class="list position-1">
+					<p class="tit-depth">영화</p>
+	
+					<ul class="list-depth">
+						<li><a href="/movie" title="전체영화">전체영화</a></li>
+						<li><a href="/curation/specialcontent" title="큐레이션">큐레이션</a></li>
+						<li><a href="javascript:void(0)" onclick="javascript:MegaboxUtil.Common.moveMovieFilmCheck();" title="영화제">영화제</a></li>
+						<li><a href="/moviepost/all" title="무비포스트">무비포스트</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-2">
+					<p class="tit-depth">예매</p>
+	
+					<ul class="list-depth">
+						<li><a href="/booking" title="빠른예매">빠른예매</a></li>
+						<li><a href="/booking/timetable" title="상영시간표">상영시간표</a></li>
+						<li><a href="/booking/privatebooking" title="더 부티크 프라빗 예매">더 부티크 프라이빗 예매</a></li>
+						<!-- <li><a href="/booking?megaboxLanguage=en" title="English Ticketing">English Ticketing</a></li> -->
+					</ul>
+				</div>
+	
+				<div class="list position-3">
+					<p class="tit-depth">극장</p>
+	
+					<ul class="list-depth">
+						<li><a href="/theater/list" title="전체극장">전체극장</a></li>
+						<li><a href="/specialtheater/list" title="특별관">특별관</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-4">
+					<p class="tit-depth">이벤트</p>
+	
+					<ul class="list-depth">
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event');return false;" title="진행중 이벤트">진행중 이벤트</a></li>
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event/end');return false;" title="지난 이벤트">지난 이벤트</a></li>
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('EVENT_LIST','/event/winner/list');return false;" title="당첨자발표">당첨자발표</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-5">
+					<p class="tit-depth">스토어</p>
+	
+					<ul class="list-depth">
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store');return false;" title="새로운 상품">새로운 상품</a></li>
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store/megaticket');return false;" title="메가티켓">메가티켓</a></li>
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store/megachance');return false;" title="메가찬스">메가찬스</a></li>
+						<li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store/popcorn');return false;" title="팝콘/음료/굿즈">팝콘/음료/굿즈</a></li>
+						<!-- <li><a href="javascript:void(0)" onclick="NetfunnelChk.aTag('STORE_LIST','/store/e-giftcard');return false;" title="기프트카드">기프트카드</a></li> -->
+					</ul>
+				</div>
+				<div class="list position-6">
+					<p class="tit-depth">나의 메가박스</p>
+					<ul class="list-depth mymage">	
+								<li><a href="" title="나의 메가박스 홈">나의 메가박스 홈</a></li>
+								<li><a href="" title="예매/구매내역">예매/구매내역</a></li>
+								<li><a href="" title="영화관람권">영화관람권</a></li>
+								<li><a href="" title="스토어교환권">스토어교환권</a></li>
+								<li><a href="" title="할인/제휴쿠폰">할인/제휴쿠폰</a></li>
+								
+								<li><a href="" title="멤버십포인트">멤버십포인트</a></li>
+								<li><a href="" title="나의 무비스토리">나의 무비스토리</a></li>
+								<li><a href="" title="나의 이벤트 응모내역">나의 이벤트 응모내역</a></li>
+								<li><a href="" title="나의 문의내역">나의 문의내역</a></li>
+								<li><a href="" title="자주쓰는 할인 카드">자주쓰는 할인 카드</a></li>
+								<li><a href="" title="회원정보">회원정보</a></li>
+
+					</ul>
+				</div>
+	
+				<div class="list position-7">
+					<p class="tit-depth">혜택</p>
+	
+					<ul class="list-depth">
+						<li><a href="/benefit/membership" title="멤버십 안내">멤버십 안내</a></li>
+						<li><a href="/benefit/viplounge" title="VIP LOUNGE">VIP LOUNGE</a></li>
+						<li><a href="/benefit/discount/guide" title="제휴/할인">제휴/할인</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-8">
+					<p class="tit-depth">고객센터</p>
+	
+					<ul class="list-depth">
+						<li><a href="/support" title="고객센터 홈">고객센터 홈</a></li>
+						<li><a href="/support/faq" title="자주묻는질문">자주묻는질문</a></li>
+						<li><a href="/support/notice" title="공지사항">공지사항</a></li>
+						<li><a href="/support/inquiry" title="1:1문의">1:1문의</a></li>
+						<li><a href="/support/rent" title="단체/대관문의">단체/대관문의</a></li>
+						<li><a href="/support/lost" title="분실물문의">분실물문의</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-9">
+					<p class="tit-depth">회사소개</p>
+	
+					<ul class="list-depth">
+						<li><a href="/megaboxinfo" target="_blank" title="메가박스소개">메가박스소개</a></li>
+						<li><a href="/socialcontribution" target="_blank" title="사회공헌">사회공헌</a></li>
+						<li><a href="/advertize" target="_blank" title="홍보자료">홍보자료</a></li>
+						<li><a href="/partner" target="_blank" title="제휴/부대사업문의">제휴/부대사업문의</a></li>
+						<li><a href="/onlinereport" target="_blank" title="온라인제보센터">온라인제보센터</a></li>
+						<li><a href="/ir" target="_blank" title="자료">IR자료</a></li>
+						<li><a href="/recruit" target="_blank" title="인재채용림">인재채용</a></li>
+						<li><a href="https://jebo.joonganggroup.com/main.do" target="_blank" title="윤리경영">윤리경영</a></li>
+					</ul>
+				</div>
+	
+				<div class="list position-10">
+					<p class="tit-depth">이용정책</p>
+	
+					<ul class="list-depth">
+						<li><a href="/support/terms" title="이용약관">이용약관</a></li>
+						<li><a href="/support/privacy" title="개인정보처리방침">개인정보처리방침</a></li>
+						<li><a href="/support/screenrule" title="스크린수배정에관한기준">스크린수배정에관한기준</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /layer-menu -->
+	</header>
+
+	<!-- main -->
+	<div class="main">
+		<div class="content">
+			<!-- main-page -->
+			<div class="main-page">
+				<!-- 공지사항 -->
+				<div class="main-notice-layer" style="display: none;">
+							<div class="img">
+								<a title="" href=""><img src="img/corona.png" alt=""></a>
+							</div>
+						<div class="util">
+						<input type="checkbox" id="no_see">
+						<label for="no_see" id="label_no_see">다시 보지 않기</label>
+						<button type="button" class="btn-close-main-notice">메인 공지 닫기</button>
+					</div>
+				</div>
+				<!-- 1.박스오피스 -->
+				<div class="section main-movie" id="main-section1">
+					<!-- 배경화면 -->
+					<div class="bg">
+						<div class="bg-pattern"></div>
+						<img src="img/index_bg.jpg" >
+					</div>
+					<div class="container">
+						<div class="cont-area">
+							<div class="box-office-title">
+								<span>박스오피스</span>
+							</div>
+							<!-- box-office-title -->
+							<div class="movie-list">
+								<ul>
+									<li>
+										<div class="movie-box">
+											<a href="#" class="movie-picture">
+												<img src="img/movie/movie1.jpg" alt="">
+											</a>
+											<div class="down_btn">
+												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
+												<div class="btn_ticketing">예매</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="movie-box">
+											<a href="#" class="movie-picture">
+												<img src="img/movie/movie1.jpg" alt="">
+											</a>
+											<div class="down_btn">
+												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
+												<div class="btn_ticketing">예매</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="movie-box">
+											<a href="#" class="movie-picture">
+												<img src="img/movie/movie1.jpg" alt="">
+											</a>
+											<div class="down_btn">
+												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
+												<div class="btn_ticketing">예매</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="movie-box">
+											<a href="#" class="movie-picture">
+												<img src="img/movie/movie1.jpg" alt="">
+											</a>
+											<div class="down_btn">
+												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
+												<div class="btn_ticketing">예매</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- movie-list -->
+							<div class="tab-menu">
+								<span>
+									<div class=search>
+										<input type="text" placeholder="영화명을 입력해 주세요"><button><i class="icon icon-search"></i></button>
+									</div>
+								</span>
+								<span><i class="icon icon-schedule-main"></i>상영시간표</span>
+								<span><i class="icon icon-boxoffice-main"></i>박스오피스</span>
+								<span><i class="icon icon-quick-reserve-main"></i>빠른예매</span>
+							</div>
+							<!-- tab-menu -->
+							<div class="mouse">
+								<img src="./img/ico/ico-mouse.png" alt="">
+							</div>
+							<!-- mouse -->
+						</div>
+						<a  class="btn-more-movie">더 많은 영화보기<span class="icon_plus icon"></div></a>
+					</div>
+				</div>
+				<!-- 2.혜택 -->
+				<div class="section main-benefit" id="main-section2">
+
+				</div>
+				<!-- 3.큐레이션 -->
+				<div class="section main-curaion" id="main-section3">
+
+				</div>
+				<!-- 4.푸터 -->
+				<div class="section main-info" id="main-section4">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		let mousePoint = 0;
+		let mouseIsUp = true;
+		// sitemap
+		$("#link-area a").each((index, element) => {
+			$(element).on('click', (e) => {
+				e.preventDefault();
+				if(index == 0) {
+					if($(element).hasClass("menu-close")) {
+					$(element).removeClass("menu-close").addClass("menu");
+					$("#layer-menu").slideUp();
+					} else {
+						$(element).removeClass("menu").addClass("menu-close");
+						$("#layer-menu").slideDown();
+					}
+				}
+			});
+		});
+		// header-menu hover
+		$('.header-menu > li > a.hover').each((index, e) => {
+			$(e).hover(() => {
+				$(e).next().children('ul').show();
+				$(".header-menu").addClass("on");
+			}, function() {
+				$(e).next().children('ul').hide();
+				$(".header-menu").removeClass("on");
+			});
+		});
+		//
+		$('.btn-close-main-notice').click( (e) => {
+			e.preventDefault();
+			$('.main-notice-layer').hide();
+		});
+		//mouse
+		function mouseMove() {
+			let point = 0;
+			let delay = 1;
+			if(mouseIsUp) {
+				point = ++mousePoint;
+				if(mousePoint > 10)  {point = 10;}
+				if(mousePoint == 10 + delay) { mouseIsUp = false; mousePoint = 10;}
+			}
+			else {
+				point = --mousePoint;
+				if(mousePoint < 0 ) { point = 0;}
+				if(mousePoint ==  0 - delay) { mouseIsUp = true; mousePoint = 0;}
+			}
+			$('.mouse img').css("top", point + "px");
+		}
+		setInterval(mouseMove, 100);
+		
+	</script>
+</body>
+</html>
