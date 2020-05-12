@@ -311,12 +311,85 @@
 							</div>
 							<!-- mouse -->
 						</div>
-						<a  class="btn-more-movie">더 많은 영화보기<span class="icon_plus icon"></div></a>
+						<a  class="btn-more-movie">더 많은 영화보기<span class="icon_plus icon"></a>
 					</div>
 				</div>
 				<!-- 2.혜택 -->
 				<div class="section main-benefit" id="main-section2">
-
+					<div class="container">
+						<div class="tit">
+							<h2 class="tit-text">혜택</h2>
+							<a href="" class="btn-more-cross purple ir_pm" title="혜택 더보기">더보기</a>
+						</div>
+						<div class="slider">
+							<div class="slider-view">
+								<div class="cell">
+									<div class="slide-banner sl1">
+										<a href="#">
+											<img src="./img/slide-img/1.original-banner.jpg" alt="">
+										</a>
+									</div>
+									<div class="slide-img sl1">
+										<a href="#">
+											<img src="./img/slide-img/1.original-img.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="cell">
+									<div class="slide-banner sl2">
+										<a href="#">
+											<img src="./img/slide-img/2.ticketbook-banner.jpg" alt="">
+										</a>
+									</div>
+									<div class="slide-img sl2">
+										<a href="#">
+											<img src="./img/slide-img/2.ticketbook-img.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="cell">
+									<div class="slide-banner sl3">
+										<a href="#">
+											<img src="./img/slide-img/3.specialReplay-banner.jpg" alt="">
+										</a>
+									</div>
+									<div class="slide-img sl3">
+										<a href="#">
+											<img src="./img/slide-img/3.specialReplay-img.jpg.jpg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="slider-control">
+								<div class="page"></div>
+								<div class="util">
+									<button type="button" class="btn-prev" >이전 이벤트 보기</button>
+									<button type="button" class="btn-next">다음 이벤트 보기</button>
+									<button type="button" class="btn-pause on">일시정지</button>
+									<button type="button" class="btn-play">자동재생</button>
+								</div>
+								<div class="page-count">1 / 3</div>
+							</div>
+						</div>
+						<div class="banner_ad">
+							<div class="banner">
+								<div class="size-big"><a href="#"><img src="img/banner/banner1.jpg" alt="이벤트 배너1"></a></div>
+								<div class="size-small"><a href="#"><img src="img/banner/banner2.jpg" alt="이벤트 배너2"></a></div>
+							</div>
+							<div class="ad-img">
+								<a href="#"><img src="./img/ad/ad_img_415x530.jpg" alt="ad 광고"></a>
+							</div>
+						</div>
+						<div class="menu">
+							<div class="cell "><a href="#" class="icon-vip-main">VIP LOUNGE</a>></div>
+							<div class="cell membership"><a href="#" class="icon-membership-main">맴버쉽</a></div>
+							<div class="cell card"><a href="#" class="icon-card-main">할인카드안내</a></div>
+							<div class="cell event"><a href="#" class="icon-event-main">이벤트</a></div>
+							<div class="cell store"><a href="#" class="icon-store-main">스토어</a></div>
+						</div>
+						<div class="grand-open">
+						</div>
+					</div>
 				</div>
 				<!-- 3.큐레이션 -->
 				<div class="section main-curaion" id="main-section3">
@@ -329,6 +402,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- /main -->
 
 
 	<!-- javascript -->
@@ -383,6 +457,74 @@
 			$('.mouse img').css("top", point + "px");
 		}
 		setInterval(mouseMove, 100);
+
+		// slide
+		let start = ["100px", "450px"];					//[banner, img]순으로 시작 위치
+		let end = ["0px", "300px"];						//[banner, img]순으로 마지막 위치
+		let aniTime = 1000;								//애니메이션 속도 m/s단위
+		let slideDelay = 5000; 							//슬라이드 전환 속도 m/s단위
+
+		let nowSlide = 1;								//시작 슬라이드 및 현재 슬라이드
+		let cell_Ct = $(".slider-view > .cell").length; // 슬라이드 갯수 
+		let page_count = $(".slider-control .page-count");
+
+		pageReset();
+		slideReset();
+		showSlide(nowSlide);
+		var moveSlide = setInterval(function() {showSlide(++nowSlide) }, slideDelay);	//슬라이드 자동 넘기기켜기
+
+		//slider-control에 있는 버튼 클릭시 액션
+		$(".slider-control .util > button").click((e) => {
+			let buttonName = {next: "btn-next", prev: "btn-prev", play: "btn-play", pause: "btn-pause"};	//버튼 클래스 이름
+			e.preventDefault();
+			let button = $(e.target);
+			if(button.hasClass(buttonName.next)) {
+				nowSlide = nowSlide == 3 ? 1 : ++nowSlide;
+				showSlide(nowSlide);
+			} else if(button.hasClass(buttonName.prev)) { 
+				nowSlide = nowSlide == 1 ? 3 : --nowSlide;
+				showSlide(nowSlide);
+			} else if(button.hasClass(buttonName.play)) { 
+				$(e.target).siblings("." + buttonName.pause).addClass("on");
+				button.removeClass("on");
+				moveSlide = setInterval(function() {showSlide(++nowSlide) }, slideDelay);	//슬라이드 자동 넘기기켜기
+			} else if(button.hasClass(buttonName.pause)) { 
+				$(e.target).siblings("." + buttonName.play).addClass("on");
+				button.removeClass("on");
+				clearInterval(moveSlide);	//슬라이드 자동 넘기기 끄기
+			}
+		});
+		//바를 몇개 만들지 정하는 코드 slider-view > .cell 갯수 만큼 지정
+		function pageReset() {
+			let page = $(".main-benefit .slider .slider-control .page");
+			for(let i = 0; i < cell_Ct; i++) {
+				page.append(`<span style="width:${100 / cell_Ct}%;"></span>`);
+			}
+		}
+		//슬라이드 초기화
+		function slideReset() {
+			$(".slider-view > .cell").hide();
+			$(".slide-banner").css("opacity", 0).css("top", start[0]);
+			$(".slide-img").css("opacity", 0).css("left", start[1]);
+		}
+		//슬라이드 보여주기(보여줄 슬라이드) !!!anitime이라는 애니메이션 속도를 받아서 사용
+		function showSlide(sl) {
+			slideReset();
+			if(sl > 3) { sl = 1; nowSlide = 1; }
+			let sell = $(".slider-view > .cell:nth-child(" + sl + ")");
+			$(sell).show();
+			$(sell).children(".slide-banner").animate({
+				opacity: 1,
+				top: end[0],
+			}, aniTime);
+			$(sell).children(".slide-img").animate({
+				opacity: 1,
+				left: end[1],
+			}, aniTime);
+			$(".main-benefit .slider .slider-control .page span.on").removeClass("on");
+			$(".main-benefit .slider .slider-control .page > span:nth-child(" + sl +")").addClass("on");
+			page_count.text(`${sl} / ${cell_Ct}`);
+		}
 		
 	</script>
 </body>

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-    background: #444;
+    background-color: #fff;
 }
 header {
     height: 91px;
@@ -32,10 +32,27 @@ header {
     min-height: 880px;
     padding: 0 0 80px 0;
 }
+.main-benefit, .main-curaion {
+    overflow: hidden;
+    position: relative;
+    min-height: 840px;
+    padding: 0;
+}
+.main-benefit::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 513px;
+    bottom: 0;
+    background-color: #503396;
+}
+.main-curaion { background-color: #252451; }
 
 
-
-/* icon =================================================================== */
+/*common ===================================================================*/
+/* icon ========================= */
 .icon {
     overflow: hidden;
     display: inline-block;
@@ -56,6 +73,43 @@ header {
 .icon-quick-reserve-main    {background-image: url(../img/ico/ico-quick-reserve-main.png);  width: 29px; height: 25px;}
 .icon-boxoffice-main        {background-image: url(../img/ico/ico-boxoffice-main.png);      width: 26px; height: 24px;}
 .icon-mouse                 {background-image: url(../img/ico/ico-mouse.png);               width: 16px; height: 24px;}
+.icon-vip-main              {background-image: url(../img/ico/ico-vip-main.png);            width: 49px; height: 41px;}
+.icon-store-main            {background-image: url(../img/ico/ico-store-main.png);          width: 46px; height: 45px;}
+.icon-membership-main       {background-image: url(../img/ico/ico-membership-main.png);     width: 36px; height: 46px;}
+.icon-card-main             {background-image: url(../img/ico/ico-card-main.png);           width: 49px; height: 35px;}
+.icon-event-main             {background-image: url(../img/ico/ico-event-main.png);         width: 44px; height: 46px;}
+
+/* btn ========= */
+.btn-more-cross             {background-image: url(../img/ico/btn-more-cross-purple.png);   width: 16px; height: 16px;}
+.btn-prev {background-image: url(../img/slide-img/btn-benefit-slider-prev.png); width: 7px; height: 12px;}
+.btn-next {background-image: url(../img/slide-img/btn-benefit-slider-next.png); width: 7px; height: 12px;}
+.btn-pause {background-image: url(../img/slide-img/btn-benefit-slider-pause.png); width: 6px; height: 12px; display: none;}
+.btn-play {background-image: url(../img/slide-img/btn-benefit-slider-play.png); width: 6px; height: 12px; display: none;}
+.btn-play.on {display: inline-block;}
+.btn-pause.on {display: inline-block;}
+/* tit */
+.main-page .tit {
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+.tit-text {
+    padding: 0 0 30px 0;
+    font-size: 2em;
+    color: #351f66 !important;
+    float: left;
+    padding: 0!important;
+    line-height: 1.1;
+}
+.tit:after, .tit:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tit .btn-more-cross {
+    display: block;
+    margin-top: 5px;
+    float: right;
+}
 
 /* header ==================================================================*/
 header .megabox {
@@ -273,7 +327,7 @@ p.tit-depth {
     padding: 0 20px;
     text-align: right;
 }
-/* 1.박스오피스 */
+/* 1.박스오피스 =======================================*/
 /* bg */
 .bg {
     overflow: hidden;
@@ -482,3 +536,101 @@ p.tit-depth {
     left: 50%;
     top: 0;
 }
+/* 2.혜택 =======================================*/
+/* slider */
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 687px;
+    height: 325px;
+    background-color: #fff;
+}
+.slide-banner {
+    position: absolute;
+}
+.slide-img {
+    position: absolute;
+    left: 300px;
+}
+.slider-control {
+    position: absolute;
+    bottom: 42px;
+}
+.slider-control > div {
+    float: left;
+}
+.slider-control .util {
+    padding: 0 10px 0 15px;
+    font-size:0;
+}
+.slider-control .page-count {
+    line-height: 14px;
+}
+.slider-control button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+.main-benefit .slider .slider-control .page {
+    float: left;
+    width: 190px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: #ebebeb;
+}
+.main-benefit .slider .slider-control .page > span {
+    display: block;
+    float: left;
+    height: 100%;
+}
+.main-benefit .slider .slider-control .page .on {background-color: #503396;}
+/* banner */
+.banner_ad {overflow: hidden; margin-bottom: 60px;}
+.banner { overflow: hidden;} 
+.banner_ad .ad-img {
+    position: absolute;
+    right: 0px;
+    top: 83px;
+}
+.banner_ad img {border-radius: 5px; width: 100%; height: 100%;}
+.banner_ad .banner > div {border-radius: 5px; box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);}
+.banner_ad .size-big {
+    float: left;
+    width: 441px;
+    height: 204px;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+.banner_ad .size-small {
+    display: block;
+    float: left;
+    width: 204px;
+    height: 204px;
+}
+/* menu*/
+.menu {margin-bottom: 50px;}
+.main-benefit .menu { overflow: hidden;}
+.main-benefit .menu > div.cell { width: 20%; float:left;}
+.menu .cell a {    
+    display: block;
+    padding: 60px 0 0 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    background-position: center 2px;
+}
+
+/* grand-open */
