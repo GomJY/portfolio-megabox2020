@@ -1,0 +1,97 @@
+@charset "utf-8";
+body {
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+
+/*common ===================================================================*/
+img {width: 100%; height: 100%; display: block;}
+a {cursor: pointer;}
+.radius10 {border-radius: 10px;}
+/* icon ========================= */
+.icon {
+    overflow: hidden;
+    display: inline-block;
+    margin: -1px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.icon-plus                  {background: url(../img/ico/ico-more-cross-gray.png) center no-repeat; width: 16px;height: 16px;}
+.icon-menu-close            {background-image: url(../img/ico/btn-header-layer-close.png);  width: 36px; height: 36px;}
+.icon-menu                  {background-image: url(../img/ico/ico-sitemap-white.png);       width: 36px; height: 36px;}
+.icon-search                {background-image: url(../img/ico/ico-search-white.png);        width: 18px; height: 18px;}
+.icon-mymega                {background-image: url(../img/ico/ico-mymega-white.png);        width: 36px; height: 36px;}
+.icon-schedule-wh           {background-image: url(../img/ico/ico-schedule-white.png);      width: 36px; height: 36px;}
+.icon-schedule-main         {background-image: url(../img/ico/ico-schedule-main.png);       width: 24px; height: 26px;}
+.icon-quick-reserve-main    {background-image: url(../img/ico/ico-quick-reserve-main.png);  width: 29px; height: 25px;}
+.icon-boxoffice-main        {background-image: url(../img/ico/ico-boxoffice-main.png);      width: 26px; height: 24px;}
+.icon-mouse                 {background-image: url(../img/ico/ico-mouse.png);               width: 16px; height: 24px;}
+.icon-vip-main              {background-image: url(../img/ico/ico-vip-main.png);            width: 49px; height: 41px;}
+.icon-store-main            {background-image: url(../img/ico/ico-store-main.png);          width: 46px; height: 45px;}
+.icon-membership-main       {background-image: url(../img/ico/ico-membership-main.png);     width: 36px; height: 46px;}
+.icon-card-main             {background-image: url(../img/ico/ico-card-main.png);           width: 49px; height: 35px;}
+.icon-event-main             {background-image: url(../img/ico/ico-event-main.png);         width: 44px; height: 46px;}
+
+/* btn ========= */
+.btn-more-cross             {background-image: url(../img/ico/btn-more-cross-purple.png);   width: 16px; height: 16px;}
+.btn-prev {background-image: url(../img/slide-img/btn-benefit-slider-prev.png); width: 7px; height: 12px;}
+.btn-next {background-image: url(../img/slide-img/btn-benefit-slider-next.png); width: 7px; height: 12px;}
+.btn-pause {background-image: url(../img/slide-img/btn-benefit-slider-pause.png); width: 6px; height: 12px; display: none;}
+.btn-play {background-image: url(../img/slide-img/btn-benefit-slider-play.png); width: 6px; height: 12px; display: none;}
+.btn-play.on {display: inline-block;}
+.btn-pause.on {display: inline-block;}
+
+.button.gblue {
+    color: #fff;
+    line-height: 36px;
+    border: 0;
+    background: #037b94;
+}
+
+/* bage */
+.bage { position: absolute; top: -10px; left: 5px;}
+.bage.classic-m { background: url(../img/bg/bg-bage-curation-classic-m.png); width: 35px; height: 36px;}
+.bage.film-m { background: url(../img/bg/bg-bage-curation-film-m.png);    width: 35px; height: 38px;}
+.bage.film { background: url(../img/bg/bg-bage-curation-film.png);    width: 123px; height: 131px;}
+
+
+/* tit */
+.main-page .tit {
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+.tit-text {
+    padding: 0 0 30px 0;
+    font-size: 2em;
+    color: #351f66;
+    float: left;
+    padding: 0!important;
+    line-height: 1.1;
+}
+.tit:after, .tit:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tit .btn-more-cross {
+    display: block;
+    margin-top: 5px;
+    float: right;
+}
+
+/* list clear both*/
+.list ul:after, .list ul:before {
+    content: '';
+    display: table;
+}
+.list ul:after {
+    clear: both;
+}

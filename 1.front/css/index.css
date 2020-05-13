@@ -51,66 +51,6 @@ header {
 .main-curaion { background-color: #252451; }
 
 
-/*common ===================================================================*/
-/* icon ========================= */
-.icon {
-    overflow: hidden;
-    display: inline-block;
-    margin: -1px 0 0 0;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: middle;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-.icon-menu-close            {background-image: url(../img/ico/btn-header-layer-close.png);  width: 36px; height: 36px;}
-.icon-menu                  {background-image: url(../img/ico/ico-sitemap-white.png);       width: 36px; height: 36px;}
-.icon-search                {background-image: url(../img/ico/ico-search-white.png);        width: 18px; height: 18px;}
-.icon-mymega                {background-image: url(../img/ico/ico-mymega-white.png);        width: 36px; height: 36px;}
-.icon-schedule-wh           {background-image: url(../img/ico/ico-schedule-white.png);      width: 36px; height: 36px;}
-.icon-schedule-main         {background-image: url(../img/ico/ico-schedule-main.png);       width: 24px; height: 26px;}
-.icon-quick-reserve-main    {background-image: url(../img/ico/ico-quick-reserve-main.png);  width: 29px; height: 25px;}
-.icon-boxoffice-main        {background-image: url(../img/ico/ico-boxoffice-main.png);      width: 26px; height: 24px;}
-.icon-mouse                 {background-image: url(../img/ico/ico-mouse.png);               width: 16px; height: 24px;}
-.icon-vip-main              {background-image: url(../img/ico/ico-vip-main.png);            width: 49px; height: 41px;}
-.icon-store-main            {background-image: url(../img/ico/ico-store-main.png);          width: 46px; height: 45px;}
-.icon-membership-main       {background-image: url(../img/ico/ico-membership-main.png);     width: 36px; height: 46px;}
-.icon-card-main             {background-image: url(../img/ico/ico-card-main.png);           width: 49px; height: 35px;}
-.icon-event-main             {background-image: url(../img/ico/ico-event-main.png);         width: 44px; height: 46px;}
-
-/* btn ========= */
-.btn-more-cross             {background-image: url(../img/ico/btn-more-cross-purple.png);   width: 16px; height: 16px;}
-.btn-prev {background-image: url(../img/slide-img/btn-benefit-slider-prev.png); width: 7px; height: 12px;}
-.btn-next {background-image: url(../img/slide-img/btn-benefit-slider-next.png); width: 7px; height: 12px;}
-.btn-pause {background-image: url(../img/slide-img/btn-benefit-slider-pause.png); width: 6px; height: 12px; display: none;}
-.btn-play {background-image: url(../img/slide-img/btn-benefit-slider-play.png); width: 6px; height: 12px; display: none;}
-.btn-play.on {display: inline-block;}
-.btn-pause.on {display: inline-block;}
-/* tit */
-.main-page .tit {
-    width: 100%;
-    padding: 50px 0 0 0;
-}
-.tit-text {
-    padding: 0 0 30px 0;
-    font-size: 2em;
-    color: #351f66 !important;
-    float: left;
-    padding: 0!important;
-    line-height: 1.1;
-}
-.tit:after, .tit:before {
-    content: '';
-    display: block;
-    clear: both;
-}
-.tit .btn-more-cross {
-    display: block;
-    margin-top: 5px;
-    float: right;
-}
-
 /* header ==================================================================*/
 header .megabox {
     position: absolute;
@@ -245,7 +185,7 @@ header .megabox a {
     color: #fff;
     line-height: 1.1;
 }
-.list {
+#layer-menu .list {
     position: absolute;
     width: 158px;
 }
@@ -350,6 +290,7 @@ p.tit-depth {
 .bg img {
     display: block;
     width: 100%;
+    height: auto;
     filter: blur(15px);
 }
 .main-movie .bg:after {
@@ -396,9 +337,6 @@ p.tit-depth {
 .btn-more-movie .icon_plus {
     margin-left: 4px;
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url(../img/ico/ico-more-cross-gray.png) center no-repeat;
 }
 /* movie-list */
 .movie-list ul {
@@ -481,6 +419,7 @@ p.tit-depth {
     width: 25%;
     border-right: 1px solid #626262;
     text-align: center;
+    cursor: pointer;
 }
 .tab-menu > span:last-child {
     border: 0;
@@ -531,6 +470,8 @@ p.tit-depth {
     text-align: center;
 }
 .mouse img {
+    width: 16px;
+    height: 24px;
     margin: 0 0 0 -8px;
     position: absolute;
     left: 50%;
@@ -633,4 +574,65 @@ p.tit-depth {
     background-position: center 2px;
 }
 
-/* grand-open */
+/* 3.큐레이션=================================== */
+/* tit */
+.main-curaion>div>.tit {margin-bottom: 40px;}
+.main-curaion .tit-text {color:#fff; }
+.more-movie {display: block; float:right; color: #aaa; line-height: 16px;}
+.more-movie:hover {text-decoration: underline;}
+.more-movie .icon-plus {margin-left: 6px;}
+
+/* curation-area */
+.curation-area {position: relative;}
+.curation-area .movie { padding: 310px 0 0 370px; position: relative;}
+/* curr-img */
+.curr-img {position: absolute; z-index: 1; width: 100%; padding: 0 0 0 0;}
+.curr-img .bage { top:-10px; left: 0px; z-index: 3; }
+.curr-img .img { padding-left: 20px; font-size: 0; line-height: 0; }
+.curr-img .img a {display: block; width: 300px; height: 430px; background: rgba(0, 0, 0,0.5); background-size: 48px 48px; border-radius: 15px;}
+.curr-img .btn-group { width: 300px; height: 50px; overflow: hidden; margin: 10px 0 0 20px;}
+.btn-group > div { width: 145px; height: 100%; text-align: center;  padding: 0; }
+.btn-group div .button {color: #fff; display: block; width: 100%; height: 50px; line-height: 48px; font-size: 1.3333em; border: 1px solid #fff; border-radius: 4px; box-sizing: border-box;}
+.btn-group .left {float: left;}
+.btn-group .right {float: right; }
+.btn-group .right .button.gblue{ border: 0;}
+.curr-img .info {
+    position: absolute;
+    left: 370px;
+    top: 0;
+    width: calc(100% - 370px);
+    color: #fff;
+}
+.curr-img .info .txt {
+    display: block;
+    margin-left: 0;
+    padding: 0 0 10px 0;
+    font-size: 1.3333em;
+    line-height: 1.1;
+}
+.curr-img .info .tit {
+    overflow: hidden;
+    display: block;
+    margin-left: 0;
+    padding: 0 0 30px 0;
+    font-size: 2.4em;
+    line-height: 1.1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.curr-img .info .summary {
+    overflow: hidden;
+    height: 192px;
+}
+.curr-img .info.film .tit {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.curr-img .info .summary:first-line {
+    line-height: 60px;
+}
+/* movie list */
+.movie-box .box {position: relative; float: left; margin-right: 15px; box-sizing: border-box; }
+.box .img { width: 170px; height: 244px;}
+.box .img img {border-radius: 10px;}
+.box .tit {padding-top: 14px; text-align: center; color: #fff; font-size: 13px;}
+.movie-box > li:last-child {margin-right: 0;}

@@ -367,7 +367,7 @@ textarea {
 }
 /* a 링크 초기화 */
 a {color: #222; text-decoration: none;}
-a:hover {color: #2698cb;}
+a:hover {color: static;}
 
 /* IR 효과 */
 .ir_pm {display:block; overflow:hidden; font-size:0; line-height:0; text-indent:-9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
