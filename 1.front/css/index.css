@@ -49,6 +49,7 @@ header {
     background-color: #503396;
 }
 .main-curaion { background-color: #252451; }
+.main-info { padding: 0  0 50px 0;}
 
 
 /* header ==================================================================*/
@@ -636,3 +637,346 @@ p.tit-depth {
 .box .img img {border-radius: 10px;}
 .box .tit {padding-top: 14px; text-align: center; color: #fff; font-size: 13px;}
 .movie-box > li:last-child {margin-right: 0;}
+
+/* 4.안내=================================== */
+.info-special { padding:40px 0 50px 0; border-bottom: 1px solid #e2e2e2;}
+.info-special ul {text-align: center;}
+.info-special ul > li { display: inline-block;  margin-right: 20px;}
+.info-special ul > li:last-child {margin-right: 0px;}    
+.info-notice {padding: 20px 0 20px 0; overflow: hidden;}
+.info-notice .notice .author, .info-notice .notice .more  { display: block;width: 7%;float: left;}
+.info-notice .notice .title { display: block; float: left; width: 84%; box-sizing: border-box; border-left: 1px solid #e2e2e2;  border-right: 1px solid #e2e2e2;}
+.info-notice .notice .more {text-align: right;}
+.info-notice .notice .title > p {display: block;}
+.info-notice .notice .title p.link {float: left;}
+.info-notice .notice .title p.date {float: right; padding-right: 12px; color: #666;}
+.info-notice .notice .title strong {color: #29899d;}
+.info-notice .notice .more i.icon.icon-arr-right-gray {margin-left: 5px;}
+.main-info .info-link {padding: 50px }
+.main-info .info-link .table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.main-info .info-link .table .cell:first-child {
+    width: 16.7%;
+}
+.main-info .info-link .table .cell {
+    display: table-cell;
+    width: 16.6%;
+    text-align: center;
+    vertical-align: middle;
+}
+.main-info .info-link .table .cell a i {
+    display: block;
+    margin: 0 auto;
+}
+.main-info .info-link .table .cell a span {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+    line-height: 1.3;
+}
+
+/* footer======= */
+#footer {
+    position: relative;
+    min-width: 1100px;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8fa;
+}
+#footer .footer-top {
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#footer .footer-bottom {
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+#footer .footer-top .fnb {
+    float: left;
+}
+#footer .footer-top .fnb li:first-child {
+    margin-left: 0;
+}
+#footer .footer-top .fnb li {
+    float: left;
+    margin-left: 14px;
+}
+#footer .footer-top .fnb li a {
+    display: block;
+    color: #666;
+    line-height: 30px;
+    font-size: .8667em;
+}
+#footer .footer-top .fnb li.privacy a {
+    color: #222;
+    font-weight: 700;
+}
+.inner-wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+.inner-wrap:after, .inner-wrap:before {
+    content: '';
+    display: table;
+}
+#footer .footer-top .btn-looking-theater {
+    overflow: hidden;
+    float: right;
+    display: block;
+    width: 106px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 28px;
+    color: #666;
+    font-size: .8667em;
+    border: 1px solid #d8d9db;
+    border-radius: 30px;
+    text-decoration: none;
+}
+#footer .footer-top .btn-looking-theater i {
+    margin-right: 4px;
+}
+#footer .footer-top .btn-looking-theater:focus, #footer .footer-top .btn-looking-theater:hover, #footer .footer-top .btn-looking-theater:visited {
+    color: #666;
+}
+#footer .footer-bottom .ci {
+    overflow: hidden;
+    display: block;
+    float: left;
+    width: 150px;
+    height: 50px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-indent: -9999px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-opacity.png) no-repeat center;
+}
+#footer .footer-bottom .footer-info {
+    float: left;
+    font-size: .8667em;
+    letter-spacing: 0;
+}
+#footer .footer-bottom .footer-sns {
+    float: right;
+}
+#footer .footer-bottom .footer-info p {
+    display: inline-block;
+    vertical-align: top;
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+#footer .footer-bottom .footer-info p.copy {
+    display: block;
+}
+#footer .footer-bottom .footer-sns {
+    float: right;
+}
+#footer .footer-bottom .footer-sns a {
+    display: block;
+    float: left;
+    width: 32px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 0;
+    line-height: 0;
+}
+#footer .footer-bottom .footer-sns a i {
+    display: block;
+    margin: 0;
+}
+
+/* layer-login */
+.modal-layer {
+    overflow-y: scroll;;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 501;
+    background-color: rgba(0,0,0,0);
+}
+.modal-layer .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    min-height: 250px;
+    margin: 0;
+    padding: 45px 0 0 0;
+    box-shadow: 2px 2px 6px 2px rgba(0,0,0,.1);
+    background: #fff;
+    /* 나중에 아래 지우기 */
+    width: 850px;
+    height: 484px;
+    margin-left: -425px;
+    margin-top: -242px;
+}
+.bg-modal {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.layer-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #503396;
+    width: 100%;
+    height: 45px;
+}
+.layer-header h3.tit {
+    color: #fff;
+    padding: 15px 20px 0 20px!important;
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+.modal-layer .wrap .layer-con {
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px 20px 0 20px;
+}
+
+.login-member {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.login-member.col-2 {
+    width: auto;
+}
+#layer_login .login-member.col-2 .col {
+    width: 380px;
+}
+.login-member .col-wrap {
+    overflow: hidden;
+}
+.login-member .col-wrap .col {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.login-member.col-2 .col.left {
+    float: left;
+}
+.login-member.col-2 .col.right {
+    float: right;
+}
+.login-input-area .input-text {
+    display: block;
+    width: 100%;
+    height: 46px;
+}
+.login-input-area .chk-util {
+    overflow: hidden;
+    padding: 15px 0 35px 0;
+}
+.login-input-area .chk-util .hp-ad a span {
+    display: inline-block;
+    color: #3d7db7;
+    vertical-align: middle;
+}
+.login-input-area .chk-util .hp-ad a em {
+    overflow: hidden;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    margin-left: 4px;
+    line-height: 14px;
+    font-size: .8em;
+    border: 1px solid #3d7db7;
+    text-align: center;
+    vertical-align: middle;
+    color: #3d7db7;
+}
+.login-input-area .btn-login {
+    display: block;
+    width: 100%;
+}
+.button[disabled] {
+    color: #777!important;
+    cursor: default!important;
+    background-color: #e0e0e0!important;
+    border-color: #e0e0e0!important;
+}
+.login-input-area .link {
+    padding: 20px 0 30px 0;
+    text-align: center;
+    line-height: 1.1;
+}
+.login-input-area .link a:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+.login-input-area .link a {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 0 0 27px;
+    padding: 0;
+    font-size: .9333em;
+    color: #666;
+}
+.login-input-area .sns-login {
+    text-align: center;
+}
+.login-input-area .sns-login a {
+    overflow: hidden;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 23px;
+    font-size: 0;
+    line-height: 0;
+}
+.login-input-area .link > a:nth-child(n + 2):before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 1px;
+    height: 16px;
+    margin-top: -8px;
+    background-color: #d8d9db;
+    pointer-events: none;
+}
+.modal-layer .wrap .btn-modal-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-indent: -9999px;
+    background: url(../img/ico/btn-layer-close.png) no-repeat center;
+}

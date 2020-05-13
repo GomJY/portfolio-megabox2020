@@ -1,17 +1,49 @@
 @charset "utf-8";
+* {box-sizing: border-box;}
 body {
-    letter-spacing: 0;
-    line-height: 1.5;
     font-size: 15px;
+}
+.input-text {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
     color: #444;
-    font-weight: 400;
+    border: 1px solid #d8d9db;
+    vertical-align: middle;
     font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
 }
-
 /*common ===================================================================*/
 img {width: 100%; height: 100%; display: block;}
 a {cursor: pointer;}
 .radius10 {border-radius: 10px;}
+.radius8 {border-radius: 8px;}
+.shadow5510 { box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2); }
+.left {float: left;}
+.right {float: right;}
+.mt15 { margin-top: 15px!important;}
+/*bg ============================ */
+.bgBox {
+    display: block;
+    width: 170px;
+    height: 170px;
+    background-color: transparent;
+    background-position: 0px top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.bg-boutique                {background-image: url(../img/bg/bg-main-megainfo-boutique.png) ;}
+.bg-mx                      {background-image: url(../img/bg/bg-main-megainfo-mx.png);}
+.bg-comfort                 {background-image: url(../img/bg/bg-main-megainfo-comfort.png);}
+.bg-kids                    {background-image: url(../img/bg/bg-main-megainfo-kids.png);}
+.bg-first                   {background-image: url(../img/bg/bg-main-megainfo-first.png);}
+.bg-boutique:hover, .bg-mx:hover, .bg-comfort:hover , .bg-kids:hover, .bg-first:hover {
+    background-position: 0px bottom;
+}
+
+
 /* icon ========================= */
 .icon {
     overflow: hidden;
@@ -38,8 +70,14 @@ a {cursor: pointer;}
 .icon-store-main            {background-image: url(../img/ico/ico-store-main.png);          width: 46px; height: 45px;}
 .icon-membership-main       {background-image: url(../img/ico/ico-membership-main.png);     width: 36px; height: 46px;}
 .icon-card-main             {background-image: url(../img/ico/ico-card-main.png);           width: 49px; height: 35px;}
-.icon-event-main             {background-image: url(../img/ico/ico-event-main.png);         width: 44px; height: 46px;}
-
+.icon-event-main            {background-image: url(../img/ico/ico-event-main.png);          width: 44px; height: 46px;}
+.icon-arr-right-gray        {background-image: url(../img/ico/ico-arr-right-gray.png);      width: 7px;  height: 12px;} 
+.icon-main-customer         {background: url(../img/ico/ico-main-customer.png);             width: 46px; height: 46px;}
+.icon-main-group            {background: url(../img/ico/ico-main-group.png);                width: 50px; height: 38px;}
+.icon-main-faq              {background: url(../img/ico/ico-main-faq.png);                  width: 50px; height: 46px;}
+.icon-main-boutique         {background: url(../img/ico/ico-main-boutique.png);             width: 48px; height: 40px;}
+.icon-main-qna              {background: url(../img/ico/ico-main-qna.png);                  width: 43px; height: 43px;}
+.icon-main-lost             {background: url(../img/ico/ico-main-lost.png);                 width: 51px; height: 39px;}
 /* btn ========= */
 .btn-more-cross             {background-image: url(../img/ico/btn-more-cross-purple.png);   width: 16px; height: 16px;}
 .btn-prev {background-image: url(../img/slide-img/btn-benefit-slider-prev.png); width: 7px; height: 12px;}
@@ -49,12 +87,7 @@ a {cursor: pointer;}
 .btn-play.on {display: inline-block;}
 .btn-pause.on {display: inline-block;}
 
-.button.gblue {
-    color: #fff;
-    line-height: 36px;
-    border: 0;
-    background: #037b94;
-}
+
 
 /* bage */
 .bage { position: absolute; top: -10px; left: 5px;}
@@ -94,4 +127,52 @@ a {cursor: pointer;}
 }
 .list ul:after {
     clear: both;
+}
+.list ul > li {
+    float: left;
+}
+
+/* button */
+.button.gblue {
+    color: #fff;
+    line-height: 36px;
+    border: 0;
+    background: #037b94;
+}
+.button.large {
+    height: 46px;
+    padding: 0 30px;
+    line-height: 44px;
+}
+.button.purple.large {
+    line-height: 46px;
+}
+.button.purple {
+    color: #fff;
+    line-height: 36px;
+    border: 0;
+    background: #503396;
+}
+.button[disabled] {
+    color: #777!important;
+    cursor: default!important;
+    background-color: #e0e0e0!important;
+    border-color: #e0e0e0!important;
+}
+
+/* checkbox */
+[type=checkbox], [type=radio] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
 }
