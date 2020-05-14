@@ -1,0 +1,110 @@
+@charset "utf-8";
+body {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    background-color: #fff;
+    width: 710px;
+    margin: 0 auto;
+}
+.content {
+    width: 510px;
+    margin: 0 auto;
+}
+.tit {
+    padding-top: 80px;
+    border-bottom: 1px solid #ebebeb;
+}
+.content .tit .tit-text {
+    color: #503396;
+    margin: 55px 0 25px 0; 
+}
+
+.tit-logo, .tit-text {
+    text-align: center;
+    width: 100%; 
+}
+.logo-mega {
+    display: inline-block;
+    background-position: center;
+    background: url(../img/signUp/logo.png) no-repeat;
+    width: 140px;
+    height: 47px;
+}
+.text-area { margin-bottom: 40px;}
+/* area */
+
+/* tit-area */
+.tit-area {padding: 40px 0 23px 0; border-bottom: 1px solid #555;}
+.tit-area h2 {
+    font-size: 1.4666em;
+    color: #222;
+    font-weight: 400;
+    margin-bottom: 10px; 
+}
+
+.text-area ul .cell {
+    overflow: hidden;
+    min-height: 50px;
+    border-bottom: 1px solid #888;
+}
+.text-input, .text-label  {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 15px 0 0 15px;
+    font-size: 16px;
+}
+.text-label {
+    width: 130px;
+    min-height: 49px;
+    background: #f7f8f9;
+}
+.text-label  label {
+    line-height: 1.5;
+}
+.text-input {
+    padding-top: 8px;
+}
+.text-input input {
+    width: 260px;
+    height: 32px;
+    padding: 10px;
+    border: 1px solid #666;
+}
+.text-input input.phone-input1 {
+    width: 49px;
+}
+.text-input input.phone-input2 {
+    width: 64px;
+}
+.text-input input.birth-input1 {
+    width: 64px;
+}
+.text-input input.birth-input2 {
+    width: 44px;
+    margin-left: 10px;
+}
+.check-area { border: 1px solid #d8d9db; margin-bottom: 40px;}
+.check-area .tit-check {padding: 10px 15px; border-bottom: 1px solid #d8d9db;}
+.check-area .notice-check { padding: 20px 25px;}
+
+.notice-check h1 {font-weight: 600; margin-bottom: 10px;}
+.notice-check > .notice-text {margin-bottom: 20px;}    
+.radio-group, .check-group {border-radius: 4px; padding: 10px 15px; background-color: #f3f4f6;}
+.notice-check label {font-weight: 600; margin-right: 20px; margin-left: 2px;}
+.notice-check .input1 {margin-bottom: 30px;}
+
+.btn-submit {padding-bottom: 80px;}
+.btn-submit .submit {
+    display: block;
+    color: #777777;
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    width: 120px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px; 
+}
