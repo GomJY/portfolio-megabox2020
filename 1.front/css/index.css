@@ -126,8 +126,10 @@ header .megabox a {
     margin-left: 20px;
     color: #fff;    
 }
+.gnb-depth2 ul > li a:hover {text-decoration: underline;}
 .gnb-depth2 ul > li:first-child a{margin-left: 0;}
 .header-menu.on {height: 44px;}
+.header-menu li.on .gnb-depth2 ul {display: block;}
 
 /* sitemap */
 #link-area > a:nth-child(1) {left: 0px;}

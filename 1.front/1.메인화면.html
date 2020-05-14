@@ -255,7 +255,7 @@
 											</a>
 											<div class="down_btn">
 												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
-												<div class="btn_ticketing">예매</div>
+												<a href="#"><div class="btn_ticketing">예매</div></a>
 											</div>
 										</div>
 									</li>
@@ -266,7 +266,7 @@
 											</a>
 											<div class="down_btn">
 												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
-												<div class="btn_ticketing">예매</div>
+												<a href="#"><div class="btn_ticketing">예매</div></a>
 											</div>
 										</div>
 									</li>
@@ -277,7 +277,7 @@
 											</a>
 											<div class="down_btn">
 												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
-												<div class="btn_ticketing">예매</div>
+												<a href="#"><div class="btn_ticketing">예매</div></a>
 											</div>
 										</div>
 									</li>
@@ -288,7 +288,7 @@
 											</a>
 											<div class="down_btn">
 												<button class="btn-heart"><i class="icon ico_heart_solid"></i>272</button>
-												<div class="btn_ticketing">예매</div>
+												<a href="#"><div class="btn_ticketing">예매</div></a>
 											</div>
 										</div>
 									</li>
@@ -659,19 +659,25 @@
 			});
 		});
 		// header-menu hover
-		$('.header-menu > li > a.hover').each((index, e) => {
-			$(e).hover(() => {
-				$(e).next().children('ul').show();
-				$(".header-menu").addClass("on");
-			}, function() {
-				$(e).next().children('ul').hide();
-				$(".header-menu").removeClass("on");
-			});
-		});
-		//
-		$('.btn-close-main-notice').click( (e) => {
-			e.preventDefault();
-			$('.main-notice-layer').hide();
+		$header_menu = $('.header-menu');
+		$header_menu_li = $('.header-menu > li');	
+		$header_menu.find('li > a').on({
+			mouseenter : function(){
+				console.log("mouseenter", this);
+				if( $(this).closest('li').find('.gnb-depth2').length > 0 ){
+					$header_menu_li.removeClass('on');
+					$(this).parent('li').addClass('on');
+					$header_menu.addClass('on');
+					$("header").on({
+						mouseleave : function(){
+							console.log("out");
+							$header_menu.find('li').removeClass('on');
+							$header_menu.removeClass('on');
+							$("header").off();
+						}
+					});
+				}
+			}
 		});
 		//mouse
 		function mouseMove() {
